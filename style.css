@@ -1,0 +1,78 @@
+:root{
+    --main-bg : #f5f5f5;
+    --main-text:  #121212;;
+    --visibility: visible;
+    --invisibility: hidden;
+}
+
+[data-theme="dark"]{
+    --main-bg: #121212;
+    --main-text: #f5f5f5;
+    --visibility: hidden;
+    --invisibility: visibility;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body{
+    padding: 0%;
+    margin: 0;
+}
+
+body{
+    min-width: 100%;
+    max-width: 100vw;
+    width: 100vw;
+    height: 100vh;
+}
+
+.container{
+    width: 100%;
+    min-width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* background: #F2F6FF; */
+    background: var(--main-bg);
+    color: var(--main-text);
+}
+
+.name{
+    margin: 2em 0;
+}
+
+
+.moon{
+    position: absolute;
+    top: 1em;
+    right: 1em;
+    visibility: var(--visibility);
+}
+
+.sun{
+    position: absolute;
+    top: 1em;
+    right: 1em;
+    visibility: var(--invisibility);
+}
+
+.moon button{
+    color: var(--main-text);
+}
+
+.sun button{
+    color: #f5f5f5;
+}
+
+.moon button,
+.sun button{
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+}
